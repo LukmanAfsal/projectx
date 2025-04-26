@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
-struct projectxApp: App {
+struct ProjectXApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var imageService = ImageService()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(imageService)
         }
     }
 }
