@@ -102,6 +102,7 @@ struct CloudinaryConfig {
     static let cloudName = "your_cloud_name"
     static let apiKey = "your_api_key"
     static let apiSecret = "your_api_secret"
+    static let apiSecret = "your_preset"
 }
 ```
 
