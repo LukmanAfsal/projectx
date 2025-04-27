@@ -20,7 +20,7 @@ A modern iOS application for uploading images with reference names, featuring ga
 
 <p float="left">
   <img width="342" alt="Image" src="https://github.com/user-attachments/assets/12c8f3af-4745-4a05-9e17-f62f63d181f5" />
-  <img src="/api/placeholder/250/550" alt="Image Naming" width="250" />
+  <img width="338" alt="Image" src="https://github.com/user-attachments/assets/097e8800-ec44-45e3-8c14-052946797b26" />
   <img src="/api/placeholder/250/550" alt="Gallery View" width="250" />
 </p>
 
