@@ -1,68 +1,126 @@
-📷 Image Uploader App
-A modern iOS application for uploading images with reference names, featuring gallery selection and camera capture capabilities, built using SwiftUI and Combine.
+# ImageUploader
 
-✨ Features
-📸 Image Capture: Take photos directly using the device camera.
+A modern iOS application for uploading images with reference names, featuring gallery selection and camera capture capabilities. Images are stored in Cloudinary with metadata in Firebase Firestore.
 
-🖼️ Gallery Selection: Pick images from the device photo library.
+![iOS](https://img.shields.io/badge/iOS-16.0%2B-blue)
+![Swift](https://img.shields.io/badge/Swift-5.7-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-🔖 Reference Naming: Add a custom name for each uploaded image.
+## ✨ Features
 
-☁️ Cloud Upload: Upload images securely to Cloudinary.
+- 📸 **Image Capture**: Take photos directly using device camera
+- 🖼️ **Gallery Selection**: Pick images from photo library
+- 🔖 **Reference Naming**: Add descriptive names to your uploads
+- 📊 **Image Management**: View all uploaded images in a dedicated tab
+- ☁️ **Cloud Storage**: Images stored in Cloudinary
+- 🔥 **Firebase Integration**: Metadata stored in Firestore
+- 🚀 **Modern Architecture**: Built with SwiftUI and Combine
 
-🔥 Data Storage: Save image URLs and reference names in Firebase Firestore.
+## 📱 Screenshots
 
-🖼️ Image Gallery: View all uploaded images with their names in a dedicated tab.
+<p float="left">
+  <img src="/api/placeholder/250/550" alt="Upload Screen" width="250" />
+  <img src="/api/placeholder/250/550" alt="Image Naming" width="250" />
+  <img src="/api/placeholder/250/550" alt="Gallery View" width="250" />
+</p>
 
-🚀 Modern Architecture: Built with SwiftUI, Combine, and MVVM principles.
+## 🏗️ Architecture
 
-📱 App Flow
-Upload Tab:
+The app follows a clean architecture approach with SwiftUI and Combine:
 
-Choose to either browse a photo from the gallery or capture a new one using the camera.
+- **UI Layer**: SwiftUI views and components
+- **Presentation Layer**: ViewModels using Combine
+- **Domain Layer**: Use cases and business logic
+- **Data Layer**: Repository implementations and API services
 
-After selecting or capturing an image, you're directed to the Image Submit View.
+## 🔧 Technologies
 
-Enter a name for your image and submit.
+- **SwiftUI**: Modern declarative UI framework
+- **Combine**: Reactive programming
+- **Cloudinary**: Cloud-based image storage and transformation
+- **Firebase Firestore**: NoSQL database for storing image metadata
+- **Swift Package Manager**: Dependency management
 
-Uploading Process:
+## 📋 Requirements
 
-The image is first uploaded to Cloudinary.
+- iOS 16.0+
+- Xcode 14+
+- Swift 5.7+
+- Cloudinary account
+- Firebase project
 
-After successful upload, the image URL and reference name are stored in Firebase Firestore.
+## 🚀 Installation
 
-Images Tab:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/ImageUploader.git
+```
 
-Automatically fetches and displays all uploaded images along with their names.
+2. Set up your Cloudinary credentials:
+   - Create a `CloudinaryConfig.swift` file with your API details
+   - Add it to the `.gitignore` to keep credentials secure
 
-Real-time updates ensure the gallery view stays current.
+3. Set up Firebase:
+   - Download `GoogleService-Info.plist` from your Firebase project
+   - Add it to your project root
 
-📸 Screenshots
+4. Install dependencies:
+```bash
+cd ImageUploader
+swift package update
+```
 
+5. Open the project in Xcode:
+```bash
+open ImageUploader.xcodeproj
+```
 
+## 🖥️ Usage
 
-🛠️ Requirements
-iOS 16.0+
+### Upload Images
 
-Xcode 14+
+1. Launch the app and navigate to the Upload tab
+2. Choose between "Select from Gallery" or "Take Photo" options
+3. After image selection/capture, you'll be directed to the naming screen
+4. Enter a reference name for your image
+5. Tap "Submit" to upload to Cloudinary and store metadata in Firebase
 
-Swift 5.7+
+### View Gallery
 
-🧰 Technologies Used
-SwiftUI — declarative UI framework
+1. Switch to the Gallery tab
+2. View all uploaded images with their reference names
+3. Images are fetched from Cloudinary with metadata from Firebase
 
-Combine — reactive programming framework
+## ⚙️ Configuration
 
-Cloudinary — image hosting and management
+### Cloudinary Setup
 
-Firebase Firestore — cloud NoSQL database
+Add your Cloudinary credentials to `CloudinaryConfig.swift`:
 
-Firebase SDK — authentication and database integration
+```swift
+struct CloudinaryConfig {
+    static let cloudName = "your_cloud_name"
+    static let apiKey = "your_api_key"
+    static let apiSecret = "your_api_secret"
+}
+```
 
-🚀 Installation
-Clone the repository:
+### Firebase Setup
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/projectx.git
+1. Create a Firebase project at [firebase.google.com](https://firebase.google.com)
+2. Add iOS app to your project and download the `GoogleService-Info.plist`
+3. Enable Firestore in your Firebase project
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
