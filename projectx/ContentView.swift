@@ -34,7 +34,7 @@ struct ContentView: View {
         .accentColor(.green)
         .environmentObject(imageService)
         .onReceive(imageService.$images) { _ in
-            // Automatically switch to Images tab when new image is added
+        
             if !imageService.images.isEmpty {
                 selectedTab = 1
             }
